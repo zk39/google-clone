@@ -2,6 +2,7 @@ import Link from "next/link";
 import { TbGridDots } from "react-icons/tb";
 export default function HomeHeader() {
   return (
+    <>
     <header className="flex justify-end text-sm p-5">
       <div className="flex space-x-4 items-center">
         <Link href="https://mail.google.com" className="hover:underline">
@@ -34,5 +35,7 @@ export default function HomeHeader() {
         </button>
       </div>
     </header>
+    </>
   );
+  
 }
