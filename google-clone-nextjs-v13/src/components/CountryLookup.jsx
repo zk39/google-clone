@@ -10,14 +10,16 @@ export default function CountryLookup() {
         async function fetchIp() {
             const response = await fetch('https://api.ipify.org/?format=json');
             const data = await response.json();
+            console.log(data.ip)
             setIp(data.ip);
           }
-          fetchIp();
+         
           async function fetchCountry() {
            const response = await fetch(`${geoURL}${ip}`);
            const data = await response.json();
            setCountry(data.country) 
         }
+        fetchIp();
         fetchCountry();
     },[])
     return (
