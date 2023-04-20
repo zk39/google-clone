@@ -21,7 +21,7 @@ export default function CountryLookup() {
         }
         fetchIp();
         fetchCountry();
-    },[])
+    },)
     return (
         <>
     <div>{country},   IP: {ip}</div>
